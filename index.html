@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>cat click</title>
+</head>
+<body>
+
+
+<img src="ente.jpg" id="ente">
+<img src="download.png" id="ente2">
+
+<p id="counter">0</p>
+
+<script>
+
+var count = 0;
+
+
+function klickzahler(){
+	
+	$("#ente").click (function(e){
+	count +=1
+	$("#counter").text(count);
+
+});
+}; 	
+klickzahler();
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>cat click</title>
+</head>
+<body>
+
+
+<script>
+
+    function addimage() { 
+        var img = document.createElement("img");
+        var counter = document.createElement("p");
+        var p = document.createTextNode("this is the counter" + "  "+ count);
+        counter.appendChild(p); 
+        img.src = "ente.jpg"; 
+        img.height = 150; 
+        img.width = 150;
+        img.ID= "ente";
+
+
+
+        document.body.appendChild(img);
+        document.body.appendChild(p); 
+        console.log(count); 
+        console.log(img.ID); 
+
+
+		function klickzahler(){	
+			$("#img").click (function(e){
+			count +=1
+			$(".p").text(count);
+
+			});
+	}; 
+
+
+    };
+
+
+var count = 0;
+var count1= 0;
+
+
+</script>
+ <button  onclick="addimage();">ente1</button>
+
+
+
+</body>
+</html>
+
+
+
+

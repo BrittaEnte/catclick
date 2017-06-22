@@ -1,7 +1,7 @@
 // we store the data in the model.
 
 var model ={
-//	currentduck: null, 
+	currentduck: null, 
 	ducks: [
 		{
 		count: 0,

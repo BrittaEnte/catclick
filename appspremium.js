@@ -2,6 +2,7 @@
 
 var model ={
 	currentduck: null, 
+	Admin: false, 
 	ducks: [
 		{
 		count: 0,
@@ -21,7 +22,7 @@ var model ={
 		{
 		count: 0,
 		name: 4,
-		img: "ente3.png",
+		img: "ente3.jpg",
 		}
 	]	
 };
@@ -41,7 +42,8 @@ var duckView= {
 
 		//activate duck counter
 		this.duckImgElem.addEventListener("click",function(){
-			octopus.incrementcount(); 
+			octopus.getCurrentCount(); 
+			console.log(octopus.getCurrentCount());
 	});
 
 },
@@ -62,7 +64,7 @@ var duckListView = {
 
 	init: function(){
 		// set the list of all ducks in general
-		this.duckListElem = document.getElementbyId("ducklist");
+		this.duckListElem = document.getElementById("duckList");
 		this.render();
 	},
 
@@ -82,7 +84,7 @@ var duckListView = {
 			//this is the duck were the loop at this very moment is 
 			duck = ducks[i];
 
-			elem.document.createElement("li");
+			elem = document.createElement("li");
 			elem.textContent = duck.name;
 			this.duckListElem.appendChild(elem);
 
@@ -128,11 +130,50 @@ var octopus = {
 
 // wie lautet der momentane countclicker?
 	getCurrentCount: function(){
-		model.ducks.count++;
+		model.currentduck.count++;
 		duckView.render();
+
 	}
 
 };
+
+
+var AdminView = {
+	init: function() {
+	var Admin = document.getElementById("Admin");
+	this.AdminDuckName = document.getElementById("Name");
+	this.AdminDuckUrl = document.getElementById("URL");
+	this.AdminDuckClick =document.getElementById("Clicks");
+
+	this.AdminCancel = document.getElementById("Cancel");
+	this.AdminSave= document.getElementById("Save");
+
+});
+
+
+
+
+	this.render();
+
+},
+
+
+	render: function(){
+		var currentduck = octopus.getCurrentDuck();
+
+
+
+	},
+
+
+
+
+	
+
+
+
+}
+
 
 // call the function
 octopus.init(); 

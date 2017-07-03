@@ -11,18 +11,21 @@ var ViewModel = function(){
 
 	
 	this.levels = ko.computed(function(){
-		var levels;
-		if (clickCount < 10){
-			levels = "infant";			
+		var levels
+		if (this.clickCount < 10){
+			levels = "infant";	
+
 		} else {
 			levels = "master";			
 		}
-		return levels;
+		return this.levels;
+		console.log(levels);
+		console.log(this.levels);
+		console("levels"); 
 		}, this);
 	}; 
 
 
-return levels
 ko.applyBindings(new ViewModel()); 
 
 

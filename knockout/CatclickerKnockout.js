@@ -18,7 +18,7 @@ var ViewModel = function(){
 		} else {
 			levels = "master";			
 		}
-		return this.levels;
+		return levels;
 		console.log(levels);
 		console.log(this.levels);
 		console("levels"); 

@@ -9,7 +9,8 @@
 
         <h2 data-bind ="text: name" ></h2>
         <div data-bind ="text: clickCount"></div>
-        <img src="" alt="cute duck" data-bind="click: incrementCounter">
+        <div data-bind="text: levels"></div>
+        <img src="" alt="cute duck" data-bind="click: incrementCounter, attr:{src: imgSrc}">
 
     </div>
 

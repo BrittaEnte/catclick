@@ -6,8 +6,15 @@
 </head>
 <body>
   
-		
-       
+	<h2>names of ducks</h2>
+       <ul data-bind="foreach: ducklist">
+       		<li data-bind="text: name, click: $parent.setDuck"></li>
+       </ul>
+
+
+
+
+
         <div data-bind = "with: currentDuck">
         	  <div data-bind="text: name"></div>
        		  <div data-bind ="text: clickCount"></div>
